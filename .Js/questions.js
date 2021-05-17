@@ -30,6 +30,7 @@ var questions = [{
     answer: "1"
   },
   {
+<<<<<<< HEAD:.Js/Questions.js
     question: "How do you add one",
     option1: "++",
     option2: "+",
@@ -37,3 +38,13 @@ var questions = [{
     option4: "+1",
     answer: "0"
   }];
+=======
+    question: "",
+    option1: "",
+    option2: "",
+    option3: "",
+    option4: "",
+    answer: ""
+  }
+];
+>>>>>>> 0b64aa3a105c6a11b2bd9f88448ff2d62fc7fd8a:.Js/questions.js
