@@ -9,8 +9,10 @@
 <body>
     <h1></h1>
 
-    <section id="stopWatch">Timer<p id="timer">0</p>
-         <p id="time"></p> 
+    <section 
+        id="countdown">Timer
+        <p id="timer">0</p>
+        <p id="time"></p> 
     </section> 
 
     <div class="quizList">
@@ -20,16 +22,28 @@
         <label class="option"><input type="radio" name="option" value="3" /><span id="opt3"></span></label>
         <label class="option"><input type="radio" name="option" value="4" /><span id="opt4"></span></label>
         <br>
-        <button id="start"onclick="clock();loadQuestion(currentQuestion);">Begin</button>
+        <button id="begin"onclick="timer();">Begin</button>
         <button id="next" onclick="loadNextQuestion();">Next</button><br>
         <button id="submit" onclick="clearInterval(myTimer);disableButton()">Finish</button>
         <form style="display: inline" action="highscores.html" method="get">
                 <button>Test Results</button>
              </form>
     </div>
+    <body>
+        <h1>Top Score</h1>
+        <div class="resultContainer">
+    
+            </div id="result" class="secondresultContainer"><div>  
+    
+            <form style="display: inline" action="index.html" method="get"><br>
+                <button>Back</button>
+             </form>
+        </div>        
     
     <script src=".js/questions.js"></script>         
     <script src=".js/script.js"></script> 
+
+
 
 
 </body>
