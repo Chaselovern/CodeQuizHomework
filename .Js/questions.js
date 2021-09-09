@@ -1,3 +1,4 @@
+//The .js script that holds the questions
 var questions = [{
     question: "What does html stand for?",
     option1: "Hypertext Markup Language",
@@ -19,7 +20,7 @@ var questions = [{
     option2: "touch",
     option3: "add",
     option4: "create",
-    answer: "2"
+    answer: "1"
   },
   {
     question: "What is vs code?",
@@ -30,7 +31,6 @@ var questions = [{
     answer: "1"
   },
   {
-<<<<<<< HEAD:.Js/Questions.js
     question: "How do you add one",
     option1: "++",
     option2: "+",
@@ -38,13 +38,3 @@ var questions = [{
     option4: "+1",
     answer: "0"
   }];
-=======
-    question: "",
-    option1: "",
-    option2: "",
-    option3: "",
-    option4: "",
-    answer: ""
-  }
-];
->>>>>>> 0b64aa3a105c6a11b2bd9f88448ff2d62fc7fd8a:.Js/questions.js

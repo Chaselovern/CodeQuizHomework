@@ -9,42 +9,53 @@
 <body>
     <h1></h1>
 
+    <!--- creating the section for the timer --->
     <section 
         id="countdown">Timer
         <p id="timer">0</p>
         <p id="time"></p> 
     </section> 
 
-    <div class="quizList">
+    <!--- creating the div to fill with the questions --->
+    <div id="quizList" class="quizList" style="display: none;">
         <div id="question" class="question">Questions</div>
-        <label class="option"><input type="radio" name="option" value="1" /><span id="opt1"></span></label>
-        <label class="option"><input type="radio" name="option" value="2" /><span id="opt2"></span></label>
-        <label class="option"><input type="radio" name="option" value="3" /><span id="opt3"></span></label>
-        <label class="option"><input type="radio" name="option" value="4" /><span id="opt4"></span></label>
+        <label class="option"><input type="radio" name="option" value="1" /><span id="opt1">Answer 1</span></label>
+        <label class="option"><input type="radio" name="option" value="2" /><span id="opt2">Answer 2</span></label>
+        <label class="option"><input type="radio" name="option" value="3" /><span id="opt3">Answer 3</span></label>
+        <label class="option"><input type="radio" name="option" value="4" /><span id="opt4">Answer 4</span></label>
         <br>
-        <button id="begin"onclick="timer();">Begin</button>
-        <button id="next" onclick="loadNextQuestion();">Next</button><br>
-        <button id="submit" onclick="clearInterval(myTimer);disableButton()">Finish</button>
-        <form style="display: inline" action="highscores.html" method="get">
-                <button>Test Results</button>
-             </form>
+        </div>
+
+    <!--- creating the primary buttons --->    
+    <div id= "mainButtons" style="display: block;">
+        <button id="begin"onclick="timer(); loadFirstQuestion();" style="display: block;">Begin</button>
+        <button id="next" onclick="loadNextQuestion();" style="display: none;">Next</button><br>
+        <!--- <button id="submit" onclick="clearInterval(myTimer);disableButton()">Finish</button> --->
+        <!--- <form style="display: inline" action="highscores.html" method="get">
+            <button>Test Results</button>
+             </form> --->
     </div>
-    <body>
-        <h1>Top Score</h1>
-        <div class="resultContainer">
+
+    <!--- asking you for your initials --->
+    <div id="Initials" class="Initials" style="display: none;">
+        <div id="finalScore" class="finalScore">
+
+        </div>
+        <label for="iName">Initials:</label><br>
+        <input type="text" id="iName" name="iName"><br>
+        <button id="iNameSubmit" onclick = "showHighScores(document.getElementById('iName').value);">Submit</button>
+    </div>
+        
+    <!--- the div for the highscores --->
+    <div id="highScores" class="highScores" style="display: none;">Highscores
+        <button id="beginAgain"onclick="timer(); loadFirstQuestion();" style="display: inline;">BeginAgain</button>
+    <div id="highScoresList"></div>
+    </div>    
     
-            </div id="result" class="secondresultContainer"><div>  
-    
-            <form style="display: inline" action="index.html" method="get"><br>
-                <button>Back</button>
-             </form>
-        </div>        
-    
+
+    <!--- script js for linking the webpage together --->
     <script src=".js/questions.js"></script>         
     <script src=".js/script.js"></script> 
-
-
-
 
 </body>
 </html>
